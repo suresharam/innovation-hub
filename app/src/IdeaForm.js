@@ -54,7 +54,20 @@ export default function IdeaForm() {
             <div className="clear-float" />   
         </div>
         <div>
-            <Dropdown />
+        <Dropdown
+                label="Event"
+                isRequired={false}
+                options={[
+                    {
+                        value: 'hackathon-2022',
+                        text: 'Hackathon 2022'
+                    },
+                    {
+                        value: 'hackathon-2021',
+                        text: 'Hackathon 2021'
+                    }
+                ]}
+            />
         </div>
         <div>
         <TextField
@@ -64,6 +77,38 @@ export default function IdeaForm() {
             rows={4}
             defaultValue=""
             variant="standard"
+            />
+        </div>
+        <div>
+            <Dropdown
+                label="Category"
+                isRequired={true}
+                options={[
+                    {
+                        value: 'technology',
+                        text: 'Technology'
+                    },
+                    {
+                        value: 'digital',
+                        text: 'Digital'
+                    },
+                    {
+                        value: 'brands',
+                        text: 'Brands'
+                    },
+                    {
+                        value: 'tools',
+                        text: 'Tools'
+                    },
+                    {
+                        value: 'Advertisement',
+                        text: 'Advertisement'
+                    },
+                    {
+                        value: 'others',
+                        text: 'Others'
+                    }
+                ]}
             />
         </div>
         <Button
