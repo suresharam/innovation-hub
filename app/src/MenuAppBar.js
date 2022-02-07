@@ -40,7 +40,7 @@ export default function MenuAppBar() {
       <FormGroup>
         
       </FormGroup>
-      <AppBar position="static">
+      <AppBar  className="Menu" position="static">
         <Toolbar>
           <IconButton
             size="large"
