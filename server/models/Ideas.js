@@ -21,6 +21,6 @@ const ideasSchema = new Schema({
   documents: String,
 });
 
-const Ideas = module("ideas", ideasSchema);
+const Ideas = model("ideas", ideasSchema);
 
 module.exports = Ideas;
