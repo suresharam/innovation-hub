@@ -11,6 +11,6 @@ const categoriesSchema = new Schema({
   },
 });
 
-const Categories = model("categories", Schema);
+const Categories = model("categories", categoriesSchema);
 
 module.exports = Categories;
