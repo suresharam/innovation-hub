@@ -18,7 +18,7 @@ const HOST = process.env.HOST || "localhost";
 const app = express();
 const init = async () => {
   // log file
-  const logFile = process.env.LOGFILE || "./log/egcampus-services.log";
+  const logFile = process.env.LOGFILE || "./log/innovation-hub.log";
   // middleware for CORS and JSON body parser
   app.use(express.json());
   app.use(cors());
@@ -36,10 +36,10 @@ const init = async () => {
   // get the database connection
   try {
     await database.connect();
-    console.log("Database Connection : OK");
+    console.log("Database Connection : 👍🏻");
   } catch (error) {
     // eslint-disable-next-line no-console
-    console.log(`${new Date()} : Database connection : Fail`, error);
+    console.log(`${new Date()} : Database connection : Fail 👎🏻`, error);
     process.exit(1);
   }
 };
