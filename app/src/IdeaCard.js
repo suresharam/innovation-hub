@@ -9,7 +9,7 @@ import {
     Button,
     IconButton
 } from '@material-ui/core';
-import FavoriteIcon from '@material-ui/icons/Favorite';
+import { Favorite, Comment, Share, ThumbUp } from '@material-ui/icons';
 
 export default function IdeaCard({category, ideaInfo}) {
     const imageSrc = './' + category?.img;
@@ -36,8 +36,17 @@ export default function IdeaCard({category, ideaInfo}) {
                         </Typography>
                     </CardContent>
                     <CardActions>
-                        <IconButton aria-label="add to favorites">
-                            <FavoriteIcon />
+                        <IconButton aria-label="press to add to favorite">
+                            <Favorite />
+                        </IconButton>
+                        <IconButton aria-label="press to like">
+                            <ThumbUp />
+                        </IconButton>
+                        <IconButton aria-label="press to comment">
+                            <Comment />
+                        </IconButton>
+                        <IconButton aria-label="press to share">
+                            <Share />
                         </IconButton>
                         <Button size="small">Learn More</Button>
                     </CardActions>
