@@ -4,7 +4,7 @@ import { Grid, Box } from '@material-ui/core';
 
 export default function IdeaCardGridContainer() {
     return (
-        <Box margin='20px'> 
+        <Box margin='30px 110px'> 
             <Grid
                 container
                 spacing={2}

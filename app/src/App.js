@@ -13,7 +13,7 @@ function App() {
       <header>
         <MenuAppBar />
       </header>
-      <Grid container spacing={2}>
+      <Grid className="Grid" container spacing={2}>
         <Grid item xs={1}>
           <ListItem>
             <Navigation />
