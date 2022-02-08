@@ -23,9 +23,14 @@ export default function Dropdown({label, isRequired = false, options = []}) {
           label={label}
           onChange={handleChange}
         >
-        {options.map((item) => {
+        {options.map((item, index) => {
             return (
-            <MenuItem value={item.value}>{item.text}</MenuItem>
+                <MenuItem
+                    key={index}
+                    value={item.value}
+                >
+                    {item.text}
+                </MenuItem>
             );
         })}
         </Select>

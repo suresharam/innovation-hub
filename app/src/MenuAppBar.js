@@ -13,10 +13,6 @@ export default function MenuAppBar() {
   const [auth, setAuth] = React.useState(true);
   const [anchorEl, setAnchorEl] = React.useState(null);
 
-  const handleChange = (event) => {
-    setAuth(event.target.checked);
-  };
-
   const handleProfileClick = (event) => {
     setAnchorEl(event.currentTarget);
   };
@@ -38,7 +34,7 @@ export default function MenuAppBar() {
           {auth && (
             <div>
               <IconButton
-                size="large"
+                size="medium"
                 aria-label="account of current user"
                 aria-controls="menu-appbar"
                 aria-haspopup="true"

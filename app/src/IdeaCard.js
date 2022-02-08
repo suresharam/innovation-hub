@@ -28,10 +28,10 @@ export default function IdeaCard({category, ideaInfo}) {
                         <Typography gutterBottom variant="h5" component="div">
                             {ideaInfo?.title || 'Idea Title'}
                         </Typography>
-                        <Typography variant="body2" color="text.secondary">
+                        <Typography variant="body2" color="textSecondary">
                             {ideaInfo?.description || 'Idea Description to tell us more about the concept and its thought'}
                         </Typography>
-                        <Typography variant="h6" color="text.secondary">
+                        <Typography variant="h6" color="textSecondary">
                             By {ideaInfo?.authors || 'Idea author/team'}
                         </Typography>
                     </CardContent>

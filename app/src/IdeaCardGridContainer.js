@@ -1,8 +1,9 @@
 import * as React from 'react';
+import { connect } from 'react-redux';
 import IdeaCard from './IdeaCard';
 import { Grid, Box } from '@material-ui/core';
 
-export default function IdeaCardGridContainer() {
+function IdeaCardGridContainer({ideas = []}) {
     return (
         <Box margin='30px 110px'> 
             <Grid
@@ -11,101 +12,40 @@ export default function IdeaCardGridContainer() {
                 justifyContent="center"
                 
             >
-                <Grid item xs={3}>
-                    <IdeaCard
-                        category={{
-                            name: "Technology",
-                            img: "./technology.png"
-                        }}
-                        ideaInfo={{
-                            title: 'Idea Harvest Tool',
-                            description: 'A place for us to collaborate bringing in all the novice ideas under one Condenast platform!',
-                            authors: 'Nihar, Rashmi, Sneha, Suresh'
-                        }}
-                    />
-                </Grid>
-                <Grid item xs={3}>
-                    <IdeaCard
-                        category={{
-                            name: "Digital",
-                            img: "./digital.png"
-                        }}
-                        ideaInfo={{
-                            title: 'Idea: Digital',
-                            description: 'A place for us to collaborate bringing in all the novice ideas under one Condenast platform!',
-                            authors: 'Nihar, Rashmi, Sneha, Suresh'
-                        }}
-                    />
-                </Grid>
-                <Grid item xs={3}>
-                    <IdeaCard
-                        category={{
-                            name: "Brands",
-                            img: "./brands.png"
-                        }}
-                        ideaInfo={{
-                            title: 'Idea: Brands',
-                            description: 'A place for us to collaborate bringing in all the novice ideas under one Condenast platform!',
-                            authors: 'Nihar, Rashmi, Sneha, Suresh'
-                        }}
-                    />
-                </Grid>
-                <Grid item xs={3}>
-                    <IdeaCard
-                        category={{
-                            name: "Tools",
-                            img: "./tools.png"
-                        }}
-                        ideaInfo={{
-                            title: 'Idea: Tools',
-                            description: 'A place for us to collaborate bringing in all the novice ideas under one Condenast platform!',
-                            authors: 'Nihar, Rashmi, Sneha, Suresh'
-                        }}
-                    />
-                </Grid>
-                <Grid item xs={3}>
-                    <IdeaCard
-                        category={{
-                            name: "Advertisement",
-                            img: "./advertisement.png"
-                        }}
-                        ideaInfo={{
-                            title: 'Idea: Advertisement',
-                            description: 'A place for us to collaborate bringing in all the novice ideas under one Condenast platform!',
-                            authors: 'Nihar, Rashmi, Sneha, Suresh'
-                        }}
-                    />
-                </Grid>
-                <Grid item xs={3}>
-                    <IdeaCard
-                        category={{
-                            name: "Others",
-                            img: "./others.png"
-                        }}
-                        ideaInfo={{
-                            title: 'Idea: Others',
-                            description: 'A place for us to collaborate bringing in all the novice ideas under one Condenast platform!',
-                            authors: 'Nihar, Rashmi, Sneha, Suresh'
-                        }}
-                    />
-                </Grid>
-                <Grid item xs={3}>
-                    <IdeaCard
-                        category={{
-                            name: "Technology",
-                            img: "./technology.png"
-                        }}
-                    />
-                </Grid>
-                <Grid item xs={3}>
-                    <IdeaCard
-                        category={{
-                            name: "Technology",
-                            img: "./technology.png"
-                        }}
-                    />
-                </Grid>
+                {ideas.map((idea, index) => {
+                    const imgSrc = `./${idea?.category?.toLowerCase()}.png`;
+                    return (
+                        <Grid key={index} item xs={3}>
+                            <IdeaCard
+                                category={{
+                                    name: idea?.category,
+                                    img: imgSrc
+                                }}
+                                ideaInfo={{
+                                    title: idea?.title,
+                                    description: idea?.description,
+                                    authors: idea?.authors
+                                }}
+                            />
+                        </Grid>
+                    );
+                })}
             </Grid>
         </Box>
     );
 }
+
+function mapStateToProps(state) {
+    return {
+        ideas: state?.ideas?.map((idea) => {
+            return {
+                title: idea?.title,
+                description: idea?.description,
+                authors: idea?.authors,
+                category: idea?.category
+            };
+        })
+    };
+}
+
+export default connect(mapStateToProps)(IdeaCardGridContainer);

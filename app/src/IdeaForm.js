@@ -1,11 +1,12 @@
 import * as React from 'react';
+import { connect } from 'react-redux';
 import Box from '@material-ui/core/Box';
 import TextField from '@material-ui/core/TextField';
 import UploadButton from './UploadButton';
 import Dropdown from './Dropdown';
 import Button from '@material-ui/core/Button';
 
-export default function IdeaForm() {
+function IdeaForm({categories}) {
   const [value, setValue] = React.useState('');
 
   const handleChange = (event) => {
@@ -83,32 +84,7 @@ export default function IdeaForm() {
             <Dropdown
                 label="Category"
                 isRequired={true}
-                options={[
-                    {
-                        value: 'technology',
-                        text: 'Technology'
-                    },
-                    {
-                        value: 'digital',
-                        text: 'Digital'
-                    },
-                    {
-                        value: 'brands',
-                        text: 'Brands'
-                    },
-                    {
-                        value: 'tools',
-                        text: 'Tools'
-                    },
-                    {
-                        value: 'Advertisement',
-                        text: 'Advertisement'
-                    },
-                    {
-                        value: 'others',
-                        text: 'Others'
-                    }
-                ]}
+                options={categories}
             />
         </div>
         <Button
@@ -129,3 +105,16 @@ export default function IdeaForm() {
     </Box>
   );
 }
+
+function mapStateToProps(state) {
+    return {
+        categories: state?.categories?.map((category) => {
+            return {
+                value: category?.categoryName,
+                text: category?.categoryName
+            };
+        })
+    };
+}
+
+export default connect(mapStateToProps)(IdeaForm);

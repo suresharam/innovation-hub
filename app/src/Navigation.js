@@ -22,7 +22,7 @@ export default function Navigation() {
   return (
     <Box sx={{ minWidth: 100, marginTop: '10px' }}> 
        <IconButton
-            size="large"
+            size="medium"
             edge="start"
             color="inherit"
             aria-label="menu"
