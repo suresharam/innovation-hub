@@ -23,10 +23,15 @@ export default function About() {
                     subheader="January 20, 2022"
                 />
                 <CardMedia
-                    component="img"
-                    height="194"
-                    image="test.jpg"
-                    alt="Paella dish"
+                    component="video"
+                    height="308"
+                    width="617"
+                    src="./conde.mp4"
+                    title="Condenast Core Values"
+                    controls
+                    muted
+                    loop
+                    autoPlay
                 />
                 <CardContent>
                     <Typography variant="body2" color="text.secondary">
