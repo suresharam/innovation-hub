@@ -1,5 +1,5 @@
 import * as React from 'react';
-import {Box, CardContent, Card, Typography, CardHeader, Avatar, CardMedia} from '@material-ui/core';
+import {Box, CardContent, Card, CardHeader, Avatar, CardMedia} from '@material-ui/core';
 
 export default function About() {
       
@@ -8,15 +8,15 @@ export default function About() {
        <div>
             <h2>About</h2>
             <h4>
-                Condé Nast is a global media company that produces some of the world’s leading print, digital, video and social brands.
-                These include Vogue, GQ, The New Yorker, Vanity Fair, Wired and Architectural Digest (AD), Condé Nast Traveler and La Cucina Italiana, among others.
+                You know the saying, “Nothing changes if nothing changes.” Well if nothing changes, we stay the same. We don’t grow. We don’t evolve. 
+                We don’t get better. And that’s not going to work—not for you, and not for the world. We need positive change. We need new ideas. We need progress.
             </h4>
             
-            <Card sx={{ maxWidth: 345 }}>
-                <CardHeader
+            <Card className="Card" sx={{ maxWidth: 345 }}>
+                <CardHeader 
                     avatar={
-                    <Avatar sx={{}} aria-label="recipe">
-                        I
+                    <Avatar sx={{}}>
+                        C
                     </Avatar>
                     }
                     title="Condenast Innovation"
@@ -34,9 +34,9 @@ export default function About() {
                     autoPlay
                 />
                 <CardContent>
-                    <Typography variant="body2" color="text.secondary">
-                        We at Condé Nast believe in Innovation is the Future !!!
-                    </Typography>
+                    <h4>
+                        We at Condé Nast believe Innovation is the Future !!!
+                    </h4>
                 </CardContent>
             </Card>
         </div>

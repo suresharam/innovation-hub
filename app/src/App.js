@@ -5,6 +5,7 @@ import IdeaForm from './IdeaForm';
 import About from './About';
 import IdeaCardGridContainer from './IdeaCardGridContainer';
 import {Grid, ListItem, Typography, Button, Box} from '@material-ui/core';
+import Navigation from './Navigation';
 
 function App() {
   return (
@@ -13,12 +14,12 @@ function App() {
         <MenuAppBar />
       </header>
       <Grid container spacing={2}>
-        <Grid item xs={2}>
+        <Grid item xs={1}>
           <ListItem>
-            <h3>TO DO Navigation here</h3>
+            <Navigation />
           </ListItem>
         </Grid>
-        <Grid item xs={5}>
+        <Grid item xs={6}>
           <ListItem>
             <About />
           </ListItem>
