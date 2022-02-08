@@ -1,9 +1,11 @@
 import * as React from 'react';
-import {Box} from '@material-ui/core';
+import {Box, Menu, MenuItem, MenuList, ListItemIcon, Typography} from '@material-ui/core';
 import MenuIcon from '@material-ui/icons/Menu';
-import MenuItem from '@material-ui/core/MenuItem';
-import Menu from '@material-ui/core/Menu';
+import DraftsIcon from '@material-ui/icons/Drafts';
 import IconButton from '@material-ui/core/IconButton';
+import PriorityHighIcon from '@material-ui/icons/PriorityHigh';
+import SendIcon from '@material-ui/icons/Send';
+
 
 
 export default function Navigation() {
@@ -45,9 +47,26 @@ export default function Navigation() {
             open={Boolean(menuEl)}
             onClose={handleCloseMenu}
           >
-            <MenuItem onClick={handleCloseMenu}>2022 Hackathon Ideas</MenuItem>
-            <MenuItem onClick={handleCloseMenu}>2022 Hackathon Ideas</MenuItem>
-            <MenuItem onClick={handleCloseMenu}>Most Liked Ideas</MenuItem>
+            <MenuList>
+                <MenuItem>
+                    <ListItemIcon>
+                        <SendIcon fontSize="small" />
+                    </ListItemIcon>
+                    <Typography variant="inherit">Hackathon</Typography>
+                </MenuItem>
+                <MenuItem>
+                    <ListItemIcon>
+                        <PriorityHighIcon fontSize="small" />
+                    </ListItemIcon>
+                    <Typography variant="inherit">Ideas</Typography>
+                </MenuItem>
+                <MenuItem>
+                    <ListItemIcon>
+                        <DraftsIcon fontSize="small" />
+                    </ListItemIcon>
+                    <Typography variant="inherit" noWrap>Categories</Typography>
+                </MenuItem>
+            </MenuList>
           </Menu>
     </Box>
   );

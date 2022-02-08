@@ -11,6 +11,10 @@
   background-color: black !important;
 }
 
+.Grid {
+  padding-bottom: 30px;
+}
+
 .App-logo {
   height: 40vmin;
   pointer-events: none;
