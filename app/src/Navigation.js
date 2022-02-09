@@ -63,6 +63,8 @@ export default function Navigation() {
         <Tab label="Hackathon 2020" {...a11yProps(2)} />
         <Tab label="Most Liked Ideas" {...a11yProps(3)} />
         <Tab label="Learning" {...a11yProps(4)} />
+        <Tab label="WYW Ideas" {...a11yProps(5)} />
+        <Tab label="GEM Demos" {...a11yProps(6)} />
       </Tabs>
     </Box>
   );

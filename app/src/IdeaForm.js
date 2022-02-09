@@ -69,6 +69,14 @@ function IdeaForm({categories}) {
                 {
                     value: 'hackathon-2021',
                     text: 'Hackathon 2021'
+                },
+                {
+                    value: 'wyw-ideas',
+                    text: 'WYW Ideas'
+                },
+                {
+                    value: 'others',
+                    text: 'Others'
                 }
             ]}
         />
