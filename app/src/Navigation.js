@@ -1,73 +1,69 @@
+
 import * as React from 'react';
-import {Box, Menu, MenuItem, MenuList, ListItemIcon, Typography} from '@material-ui/core';
-import MenuIcon from '@material-ui/icons/Menu';
-import DraftsIcon from '@material-ui/icons/Drafts';
-import IconButton from '@material-ui/core/IconButton';
-import PriorityHighIcon from '@material-ui/icons/PriorityHigh';
-import SendIcon from '@material-ui/icons/Send';
+import PropTypes from 'prop-types';
+import Tabs from '@material-ui/core/Tabs';
+import Tab from '@material-ui/core/Tab';
+import Typography from '@material-ui/core/Typography';
+import Box from '@material-ui/core/Box';
 
-
-
-export default function Navigation() {
-    const [menuEl, setMenuEl] = React.useState(null);
-
-    const handleMenu = (event) => {
-        setMenuEl(event.currentTarget);
-      };
-
-    const handleCloseMenu = () => {
-    setMenuEl(null);
-    };
+function TabPanel(props) {
+  const { children, value, index, ...other } = props;
 
   return (
-    <Box sx={{ minWidth: 100, marginTop: '10px' }}> 
-       <IconButton
-            size="medium"
-            edge="start"
-            color="inherit"
-            aria-label="menu"
-            aria-controls="hamburger-menu-appbar"
-            aria-haspopup="true"
-            sx={{ mr: 2 }}
-            onClick={handleMenu}
-          >
-            <MenuIcon />            
-          </IconButton>
-          <Menu
-            id="hamburger-menu-appbar"
-            anchorEl={menuEl}
-            anchorOrigin={{
-              vertical: 'top',
-              horizontal: 'left',
-            }}
-            transformOrigin={{
-              vertical: 'top',
-              horizontal: 'left',
-            }}
-            open={Boolean(menuEl)}
-            onClose={handleCloseMenu}
-          >
-            <MenuList>
-                <MenuItem>
-                    <ListItemIcon>
-                        <SendIcon fontSize="small" />
-                    </ListItemIcon>
-                    <Typography variant="inherit">Hackathon</Typography>
-                </MenuItem>
-                <MenuItem>
-                    <ListItemIcon>
-                        <PriorityHighIcon fontSize="small" />
-                    </ListItemIcon>
-                    <Typography variant="inherit">Ideas</Typography>
-                </MenuItem>
-                <MenuItem>
-                    <ListItemIcon>
-                        <DraftsIcon fontSize="small" />
-                    </ListItemIcon>
-                    <Typography variant="inherit" noWrap>Categories</Typography>
-                </MenuItem>
-            </MenuList>
-          </Menu>
+    <div
+      role="tabpanel"
+      hidden={value !== index}
+      id={`vertical-tabpanel-${index}`}
+      aria-labelledby={`vertical-tab-${index}`}
+      {...other}
+    >
+      {value === index && (
+        <Box sx={{ p: 3 }}>
+          <Typography>{children}</Typography>
+        </Box>
+      )}
+    </div>
+  );
+}
+
+TabPanel.propTypes = {
+  children: PropTypes.node,
+  index: PropTypes.number.isRequired,
+  value: PropTypes.number.isRequired,
+};
+
+function a11yProps(index) {
+  return {
+    id: `vertical-tab-${index}`,
+    'aria-controls': `vertical-tabpanel-${index}`,
+  };
+}
+
+export default function Navigation() {
+  const [value, setValue] = React.useState(0);
+
+  const handleChange = (event, newValue) => {
+    setValue(newValue);
+  };
+
+  return (
+    <Box className="Navigation" 
+      sx={{ flexGrow: 1, bgcolor: 'background.paper', display: 'flex', height: 610 }}
+    >
+      <Tabs
+        orientation="vertical"
+        variant="scrollable"
+        value={value}
+        onChange={handleChange}
+        aria-label="Vertical tabs example"
+        sx={{ borderRight: 1, borderColor: 'divider' }}
+      >
+        <Tab label="Hackathon 2022" {...a11yProps(0)} />
+        <Tab label="Hackathon 2021" {...a11yProps(1)} />
+        <Tab label="Hackathon 2020" {...a11yProps(2)} />
+        <Tab label="Most Liked Ideas" {...a11yProps(3)} />
+        <Tab label="Learning" {...a11yProps(4)} />
+      </Tabs>
     </Box>
   );
 }

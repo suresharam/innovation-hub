@@ -102,6 +102,9 @@ function IdeaForm({categories}) {
         >
             Submit
         </Button>
+        <div className="IdeaForm__upload-text">
+            Note: Fileds marked with * are mandatory for form submission
+        </div>
     </Box>
   );
 }
