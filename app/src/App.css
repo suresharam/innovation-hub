@@ -41,7 +41,7 @@
   flex-direction: column;
   font-size: calc(10px + 2vmin);
   color: white;
-  margin: 12px 30% !important;
+  margin: 12px 26% !important;
 }
 
 .App-link {
@@ -171,7 +171,8 @@ li a:focus {
 }
 
 .MenuAppBar__card-media {
-  width: 10% !important;
+  width: 15% !important;
+  height: 20px;
 }
 
 @keyframes App-logo-spin {

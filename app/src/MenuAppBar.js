@@ -9,6 +9,7 @@ import FormGroup from '@material-ui/core/FormGroup';
 import MenuItem from '@material-ui/core/MenuItem';
 import Menu from '@material-ui/core/Menu';
 import CardMedia from '@material-ui/core/CardMedia';
+import {Search} from '@material-ui/icons';
 
 export default function MenuAppBar() {
   const [auth, setAuth] = React.useState(true);
@@ -35,9 +36,12 @@ export default function MenuAppBar() {
               src="./conde-nast-logo.png"
               title="Condé Nast"
           />
-          <Typography variant="h4" className="App-header" component="div" sx={{ flexGrow: 1 }}>
-            Condé Nast Innovation Hub
+          <Typography variant="h3" className="App-header" component="div" sx={{ flexGrow: 1 }}>
+            INNOVATION HUB
           </Typography>
+          <IconButton size="large" aria-label="search" color="inherit">
+            <Search />
+          </IconButton>
           {auth && (
             <div>
               <IconButton
@@ -67,7 +71,7 @@ export default function MenuAppBar() {
               >
                 <MenuItem onClick={handleClose}>Profile</MenuItem>
                 <MenuItem onClick={handleClose}>My Ideas</MenuItem>
-                <MenuItem onClick={handleClose}>My Account</MenuItem>
+                <MenuItem onClick={handleClose}>Logout</MenuItem>
               </Menu>
             </div>
           )}
