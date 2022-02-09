@@ -5,7 +5,7 @@ import MenuItem from '@material-ui/core/MenuItem';
 import FormControl from '@material-ui/core/FormControl';
 import Select from '@material-ui/core/Select';
 
-export default function Dropdown({label, isRequired = false, options = []}) {
+export default function Dropdown({identifier, label, isRequired = false, options = []}) {
   const [option, setOption] = React.useState('');
 
   const handleChange = (event) => {
@@ -14,7 +14,7 @@ export default function Dropdown({label, isRequired = false, options = []}) {
 
   return (
     <Box sx={{ minWidth: 120, marginTop: '20px' }}>
-      <FormControl required={isRequired}>
+      <FormControl required={isRequired} id={identifier}>
         <InputLabel id="demo-simple-select-label">{label}</InputLabel>
         <Select
           labelId="demo-simple-select-label"
