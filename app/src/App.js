@@ -30,7 +30,7 @@ function App() {
           </ListItem>
         </Grid>
       </Grid>
-      <Typography variant="h4">All Ideas</Typography>
+      <Typography variant="h4" className="App__sub-section" >All Ideas</Typography>
       <IdeaCardGridContainer />
       <Box
         sx={{
