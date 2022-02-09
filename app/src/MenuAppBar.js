@@ -8,6 +8,7 @@ import AccountCircle from '@material-ui/icons/AccountCircle';
 import FormGroup from '@material-ui/core/FormGroup';
 import MenuItem from '@material-ui/core/MenuItem';
 import Menu from '@material-ui/core/Menu';
+import CardMedia from '@material-ui/core/CardMedia';
 
 export default function MenuAppBar() {
   const [auth, setAuth] = React.useState(true);
@@ -28,7 +29,13 @@ export default function MenuAppBar() {
       </FormGroup>
       <AppBar  className="Menu" position="static">
         <Toolbar>
-          <Typography variant="h3" className="App-header" component="div" sx={{ flexGrow: 1 }}>
+          <CardMedia
+              component="img"
+              className="MenuAppBar__card-media"
+              src="./conde-nast-logo.png"
+              title="Condé Nast"
+          />
+          <Typography variant="h4" className="App-header" component="div" sx={{ flexGrow: 1 }}>
             Condé Nast Innovation Hub
           </Typography>
           {auth && (
