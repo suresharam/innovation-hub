@@ -48,7 +48,7 @@ export default function Navigation() {
 
   return (
     <Box className="Navigation" 
-      sx={{ flexGrow: 1, bgcolor: 'background.paper', display: 'flex', height: 610 }}
+      sx={{ flexGrow: 1, bgcolor: 'background.paper', display: 'flex', height: 800 }}
     >
       <Tabs
         orientation="vertical"
