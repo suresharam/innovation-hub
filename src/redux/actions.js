@@ -11,7 +11,9 @@ export const setCategories = (categories) => ({
 
 export const fetchData = async (uri) => {
   try {
-    const response = await fetch(`http://localhost:8080/${uri}`);
+    const response = await fetch(
+      `https://innovation-hub-apis.herokuapp.com/${uri}`
+    );
     const data = await response.json();
     return { data };
   } catch (error) {
