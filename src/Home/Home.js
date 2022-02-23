@@ -7,19 +7,27 @@ function Home() {
     return (
       <div className="App">
         <Grid className="Grid" container spacing={2}>
-          <Grid item xs={7}>
+          <Grid item xs={6}>
             <ListItem>
               <About />
             </ListItem>
           </Grid>
-          <Grid item xs={5}>
+          <Grid item xs={6}>
             <ListItem>
               <IdeaForm />
             </ListItem>
           </Grid>
         </Grid>
-        <Typography variant="h4" className="App__sub-section" >All Ideas</Typography>
-        <IdeaCardGridContainer />
+        <Grid className="Grid" container spacing={2}>
+          <Grid item xs={12}>
+            <Typography variant="h4" className="App__sub-section" >All Ideas</Typography>
+          </Grid>
+        </Grid>
+        <Grid className="Grid" container spacing={2}>
+          <Grid item xs={12}>
+            <IdeaCardGridContainer />
+          </Grid>
+        </Grid>
         <Box
           sx={{
             margin: '20px',
