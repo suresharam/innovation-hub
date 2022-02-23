@@ -1,4 +1,7 @@
 import * as React from 'react';
+import {
+  Link
+} from "react-router-dom";
 import AppBar from '@material-ui/core/AppBar';
 import Box from '@material-ui/core/Box';
 import Button from '@material-ui/core/Button';
@@ -6,7 +9,6 @@ import Toolbar from '@material-ui/core//Toolbar';
 import Typography from '@material-ui/core/Typography';
 import IconButton from '@material-ui/core/IconButton';
 import AccountCircle from '@material-ui/icons/AccountCircle';
-import FormGroup from '@material-ui/core/FormGroup';
 import MenuItem from '@material-ui/core/MenuItem';
 import Menu from '@material-ui/core/Menu';
 import CardMedia from '@material-ui/core/CardMedia';
@@ -24,7 +26,24 @@ export default function MenuAppBar() {
     setAnchorEl(null);
   };
 
-  const pages = ['Hackathon', 'Most Liked Ideas', 'WYW Ideas'];
+  const pages = [
+    {
+      name: 'Home',
+      path: '/'
+    },
+    {
+      name: 'Hackathon',
+      path: '/hackathon'
+    },
+    {
+      name: 'Most Liked Ideas',
+      path: '/mostLikedIdeas'
+    },
+    {
+      name: 'WYW Ideas',
+      path: '/wywIdeas'
+    }
+  ]
 
   return (
     <Box sx={{ flexGrow: 1 }} className="MenuAppBar__box">
@@ -42,11 +61,11 @@ export default function MenuAppBar() {
           <Box sx={{ flexGrow: 1, display: { xs: 'none', md: 'flex' } }}>
             {pages.map((page) => (
               <Button
-                key={page}
+                key={page.name}
                 className="MenuAppBar__button"
                 sx={{ my: 2, color: 'white', display: 'block' }}
-              >
-                {page}
+              >                
+                <Link to={page.path}>{page.name}</Link>
               </Button>
             ))}
           </Box>
@@ -80,7 +99,9 @@ export default function MenuAppBar() {
                 open={Boolean(anchorEl)}
                 onClose={handleClose}
               >
-                <MenuItem onClick={handleClose}>Profile</MenuItem>
+                <MenuItem onClick={handleClose}>
+                  <Link to="/myProfile">Profile</Link>
+                </MenuItem>
                 <MenuItem onClick={handleClose}>My Ideas</MenuItem>
                 <MenuItem onClick={handleClose}>Logout</MenuItem>
               </Menu>

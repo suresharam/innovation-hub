@@ -46,7 +46,7 @@
   flex-direction: column;
   font-size: calc(10px + 2vmin);
   color: white;
-  margin: 12px 26% !important;
+  text-align: center;
 }
 
 .App__sub-section {
@@ -187,8 +187,9 @@ li a:focus {
   background: black;
 }
 
-.MenuAppBar__button  .MuiButton-label {
+.MenuAppBar__button  .MuiButton-label a {
   color: white;
+  text-decoration: none;
 }
 
 .MenuAppBar__card-media {

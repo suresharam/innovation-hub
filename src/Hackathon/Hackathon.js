@@ -1,7 +1,7 @@
 function Hackathon() {
     return (
       <div>
-        <h2>About</h2>
+        <h2>Hackathon</h2>
       </div>
     );
   }
