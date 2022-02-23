@@ -16,11 +16,6 @@
   padding-top: 0 !important;
 }
 
-.Navigation {
-  background-color: rgb(83, 81, 81) !important;
-  color: rgb(255, 255, 255);
-}
-
 .Menu {
   background-color: black !important;
 }
@@ -195,6 +190,7 @@ li a:focus {
 .MenuAppBar__card-media {
   width: 15% !important;
   height: 20px;
+  padding-right: 380px;
 }
 
 @keyframes App-logo-spin {

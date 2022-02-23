@@ -36,8 +36,8 @@ export default function MenuAppBar() {
       path: '/hackathon'
     },
     {
-      name: 'Most Liked Ideas',
-      path: '/mostLikedIdeas'
+      name: 'Gem Recordings',
+      path: '/gemRecordings'
     },
     {
       name: 'WYW Ideas',
