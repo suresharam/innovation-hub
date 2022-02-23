@@ -1,6 +1,7 @@
 import * as React from 'react';
 import AppBar from '@material-ui/core/AppBar';
-import Box from '@material-ui/core//Box';
+import Box from '@material-ui/core/Box';
+import Button from '@material-ui/core/Button';
 import Toolbar from '@material-ui/core//Toolbar';
 import Typography from '@material-ui/core/Typography';
 import IconButton from '@material-ui/core/IconButton';
@@ -23,12 +24,14 @@ export default function MenuAppBar() {
     setAnchorEl(null);
   };
 
+  const pages = ['Hackathon', 'Most Liked Ideas', 'WYW Ideas'];
+
   return (
-    <Box sx={{ flexGrow: 1 }}>
-      <FormGroup>
-        
-      </FormGroup>
-      <AppBar  className="Menu" position="static">
+    <Box sx={{ flexGrow: 1 }} className="MenuAppBar__box">
+      <Typography variant="h3" className="App-header" component="div" sx={{ flexGrow: 1 }}>
+            GPT HUB
+      </Typography>
+      <AppBar className="Menu" position="static">
         <Toolbar>
           <CardMedia
               component="img"
@@ -36,9 +39,17 @@ export default function MenuAppBar() {
               src="./conde-nast-logo.png"
               title="Condé Nast"
           />
-          <Typography variant="h3" className="App-header" component="div" sx={{ flexGrow: 1 }}>
-            INNOVATION HUB
-          </Typography>
+          <Box sx={{ flexGrow: 1, display: { xs: 'none', md: 'flex' } }}>
+            {pages.map((page) => (
+              <Button
+                key={page}
+                className="MenuAppBar__button"
+                sx={{ my: 2, color: 'white', display: 'block' }}
+              >
+                {page}
+              </Button>
+            ))}
+          </Box>
           <IconButton size="large" aria-label="search" color="inherit">
             <Search />
           </IconButton>

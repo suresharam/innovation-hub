@@ -183,6 +183,14 @@ li a:focus {
   margin: 20px 0 !important;
 }
 
+.MenuAppBar__box {
+  background: black;
+}
+
+.MenuAppBar__button  .MuiButton-label {
+  color: white;
+}
+
 .MenuAppBar__card-media {
   width: 15% !important;
   height: 20px;
