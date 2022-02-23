@@ -12,7 +12,7 @@ import CardMedia from '@material-ui/core/CardMedia';
 import {Search} from '@material-ui/icons';
 
 export default function MenuAppBar() {
-  const [auth, setAuth] = React.useState(true);
+  const [auth] = React.useState(true);
   const [anchorEl, setAnchorEl] = React.useState(null);
 
   const handleProfileClick = (event) => {
