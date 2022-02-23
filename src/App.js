@@ -23,10 +23,10 @@ export default function App() {
             <Link to="/">Home</Link>
           </li>
           <li>
-            <Link to="/about">Hackathon</Link>
+            <Link to="/hackathon">Hackathon</Link>
           </li>
           <li>
-            <Link to="/dashboard">My Profile</Link>
+            <Link to="/myProfile">My Profile</Link>
           </li>
         </ul>
         <hr />
