@@ -17,13 +17,9 @@ function Home() {
               <IdeaForm />
             </ListItem>
           </Grid>
-        </Grid>
-        <Grid className="Grid" container spacing={2}>
           <Grid item xs={12}>
-            <Typography variant="h4" className="App__sub-section" >All Ideas</Typography>
+            <Typography variant="h4" className="App__sub-section" >Hackathon</Typography>
           </Grid>
-        </Grid>
-        <Grid className="Grid" container spacing={2}>
           <Grid item xs={12}>
             <IdeaCardGridContainer />
           </Grid>
