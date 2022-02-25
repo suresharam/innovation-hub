@@ -18,6 +18,7 @@ function IdeaForm({categories}) {
       component="form"
       sx={{
         '& .MuiTextField-root': { m: 1, width: '25ch' },
+        marginTop: '35px'
       }}
       autoComplete="off"
     >

@@ -11,6 +11,15 @@
   background-color: rgb(226, 226, 231) !important;
 }
 
+.Hackathon {
+  background: radial-gradient(at top left, transparent, #111) #666;
+  color: #fff;
+}
+
+.Hackathon h2 {
+  text-align: center;
+}
+
 .MuiListItem-gutters {
   padding-left: 0 !important;
   padding-top: 0 !important;
@@ -48,6 +57,7 @@
   border: 1px solid;
   border-left: 0px;
   border-right: 0;
+  text-align: center;
 }
 
 .App-link {
