@@ -4,7 +4,7 @@ import {Box, CardContent, Card, CardHeader, Avatar, CardMedia} from '@material-u
 export default function About() {
       
   return (
-    <Box className="About" sx={{ minWidth: 120, marginTop: '10px' }}> 
+    <Box className="About" sx={{ minWidth: 120, marginTop: '35px' }}> 
        <div>
             <h2>About</h2>
             <h4>
