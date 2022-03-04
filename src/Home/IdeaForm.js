@@ -72,6 +72,7 @@ function IdeaForm({categories}) {
                     id="standard-multiline-static"
                     label="Description"
                     multiline
+                    required={true}
                     margin="dense"
                     rows={4}
                     variant="standard"
