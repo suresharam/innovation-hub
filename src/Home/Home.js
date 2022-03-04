@@ -21,7 +21,7 @@ function Home() {
             <Typography variant="h4" className="App__sub-section" >Hackathon</Typography>
           </Grid>
           <Grid item xs={12}>
-            <IdeaCardGridContainer />
+            <IdeaCardGridContainer ideasCount={4}/>
           </Grid>
         </Grid>
         <Box
@@ -35,7 +35,7 @@ function Home() {
             '& button': { m: 1 }
           }}
         >
-          <Button variant="contained" size="large">See more Ideas</Button>
+          <Button variant="contained" size="large" href="/hackathon">See all Hackathon Ideas</Button>
         </Box>      
       </div>
     );

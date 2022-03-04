@@ -3,7 +3,8 @@ import { connect } from 'react-redux';
 import IdeaCard from './IdeaCard';
 import { Grid, Box } from '@material-ui/core';
 
-function IdeaCardGridContainer({ideas = []}) {
+function IdeaCardGridContainer({ideas = [], ideasCount}) {
+    const ideasToShow = ideasCount ? ideas?.slice(0,ideasCount) : ideas;
     return (
         <Box margin='20px 40px 20px 15px'> 
             <Grid
@@ -12,7 +13,7 @@ function IdeaCardGridContainer({ideas = []}) {
                 justifyContent="center"
                 
             >
-                {ideas.map((idea, index) => {
+                {ideasToShow.map((idea, index) => {
                     const imgSrc = `./${idea?.category?.toLowerCase()}.png`;
                     return (
                         <Grid key={index} item xs={3}>
