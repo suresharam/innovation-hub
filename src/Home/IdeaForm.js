@@ -7,8 +7,9 @@ import Dropdown from './Dropdown';
 import Button from '@material-ui/core/Button';
 import Typography from '@material-ui/core/Typography';
 import Modal from '@material-ui/core/Modal';
+import {postIdea} from '../redux/actions';
 
-function IdeaForm({categories}) {
+function IdeaForm({categories, postIdea}) {
     const [title, setTitle] = React.useState('');
     const [description, setDescription] = React.useState('');
     const [additionalInfo, setAdditionalInfo] = React.useState('');
@@ -92,7 +93,7 @@ function IdeaForm({categories}) {
                 <Dropdown
                     label="Event"
                     identifier="idea-form-event-dropdown"
-                    isRequired={false}
+                    isRequired={true}
                     options={[
                         {
                             value: 'hackathon-2022',
@@ -157,7 +158,7 @@ function IdeaForm({categories}) {
                         event.preventDefault();
                         const formNode = event.currentTarget.form;
                         if (event.currentTarget.form.reportValidity()) {
-                            const eventType = formNode.querySelector("#idea-form-event-dropdown input").value;
+                            const eventType = formNode.querySelector("#idea-form-event-dropdown #demo-simple-select").textContent;
                             const category = formNode.querySelector("#idea-form-category-dropdown input").value;
                             const data = {
                                 ideaId: Math.floor(Math.random() * (1000)) + 1,
@@ -168,24 +169,10 @@ function IdeaForm({categories}) {
                                 event: eventType,
                                 additionalInfo
                             };
-                            await fetch('https://innovation-hub-apis.herokuapp.com/ideas', {
-                                method: 'POST', // *GET, POST, PUT, DELETE, etc.
-                                mode: 'cors', // no-cors, *cors, same-origin
-                                cache: 'no-cache', // *default, no-cache, reload, force-cache, only-if-cached
-                                credentials: 'same-origin', // include, *same-origin, omit
-                                headers: {
-                                'Content-Type': 'application/json'
-                                // 'Content-Type': 'application/x-www-form-urlencoded',
-                                },
-                                redirect: 'follow', // manual, *follow, error
-                                referrerPolicy: 'no-referrer', // no-referrer, *no-referrer-when-downgrade, origin, origin-when-cross-origin, same-origin, strict-origin, strict-origin-when-cross-origin, unsafe-url
-                                body: JSON.stringify(data) // body data type must match "Content-Type" header
-                            }).then((response) => {
-                                if (response.status === 200) {
-                                    resetForm(formNode);
-                                    handleOpen();
-                                }
-                            })
+                            await postIdea(data, () => {
+                                resetForm(formNode);
+                                handleOpen();
+                            });
                         }         
                     }}
                 >
@@ -225,4 +212,10 @@ const mapStateToProps = (state) => {
     };
 }
 
-export default connect(mapStateToProps)(IdeaForm);
+const mapDispatchToProps = (dispatch) => {
+    return {
+        postIdea: (idea, onSuccessCallback) => postIdea(dispatch, idea, onSuccessCallback)
+    };
+};
+
+export default connect(mapStateToProps, mapDispatchToProps)(IdeaForm);
