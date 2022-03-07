@@ -5,7 +5,7 @@ import {Grid, ListItem, Typography, Button, Box} from '@material-ui/core';
 
 function Home() {
     return (
-      <div className="App">
+      <div className="App Hackathon">
         <Grid className="Grid" container spacing={2}>
           <Grid item xs={6}>
             <ListItem>

@@ -13,7 +13,7 @@
 
 .Hackathon {
   background: radial-gradient(at top left, transparent, #111) #666;
-  color: #fff;
+  color: #fff !important;
 }
 
 .Hackathon h2 {
@@ -199,6 +199,11 @@ li a:focus {
   width: 15% !important;
   height: 20px;
   padding-right: 400px;
+}
+
+.Footer-image {
+  width: 80% !important;
+  height: 110px;
 }
 
 h2{
