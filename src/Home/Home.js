@@ -5,7 +5,7 @@ import {Grid, ListItem, Typography, Button, Box} from '@material-ui/core';
 
 function Home() {
     return (
-      <div className="App">
+      <div className="App Hackathon">
         <Grid className="Grid" container spacing={2}>
           <Grid item xs={6}>
             <ListItem>
@@ -16,27 +16,34 @@ function Home() {
             <ListItem>
               <IdeaForm />
             </ListItem>
-          </Grid>
+          </Grid>          
           <Grid item xs={12}>
-            <Typography variant="h4" className="App__sub-section" >Hackathon</Typography>
+            <Typography variant="h4" className="App__sub-section" >Latest Ideas</Typography>
           </Grid>
           <Grid item xs={12}>
             <IdeaCardGridContainer ideasCount={4}/>
           </Grid>
+          <Grid item xs={12}>
+            <Typography variant="h4" className="App__sub-section" >Hackathon 2022</Typography>
+          </Grid>
+          <Grid item xs={12}>
+            <IdeaCardGridContainer ideasCount={4} ideasEventType='Hackathon 2022'/>
+          </Grid>
+          <Box
+            sx={{
+              width: '100%',
+              backgroundColor: 'primary.dark',
+              '&:hover': {
+                backgroundColor: 'primary.main',
+                opacity: [0.9, 0.8, 0.7],
+              },
+              '& button': { m: 1 }
+            }}
+          >
+            <Button variant="contained" size="large" href="/hackathon">See all Hackathon Ideas</Button>
+          </Box>
         </Grid>
-        <Box
-          sx={{
-            margin: '20px',
-            backgroundColor: 'primary.dark',
-            '&:hover': {
-              backgroundColor: 'primary.main',
-              opacity: [0.9, 0.8, 0.7],
-            },
-            '& button': { m: 1 }
-          }}
-        >
-          <Button variant="contained" size="large" href="/hackathon">See all Hackathon Ideas</Button>
-        </Box>      
+                   
       </div>
     );
 }

@@ -3,8 +3,13 @@ import { connect } from 'react-redux';
 import IdeaCard from './IdeaCard';
 import { Grid, Box } from '@material-ui/core';
 
-function IdeaCardGridContainer({ideas = [], ideasCount}) {
-    const ideasToShow = ideasCount ? ideas?.slice(0,ideasCount) : ideas;
+function IdeaCardGridContainer({ideas = [], ideasCount, ideasEventType}) {
+    const eventRelatedIdeas = ideasEventType
+        ? ideas.filter( i => i.event === ideasEventType )?.slice(0)?.reverse()
+        : ideas?.slice(0)?.reverse();
+    const ideasToShow = ideasCount
+        ? eventRelatedIdeas?.slice(0,ideasCount)
+        : eventRelatedIdeas;
     return (
         <Box margin='20px 40px 20px 15px'> 
             <Grid
@@ -43,7 +48,8 @@ function mapStateToProps(state) {
                 title: idea?.title,
                 description: idea?.description,
                 authors: idea?.authors,
-                category: idea?.category
+                category: idea?.category,
+                event: idea?.event
             };
         })
     };

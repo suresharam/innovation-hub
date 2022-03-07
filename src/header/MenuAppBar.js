@@ -83,7 +83,7 @@ export default function MenuAppBar(props) {
               </Button>
             ))}
           </Box>
-          <IconButton size="large" aria-label="search" color="inherit">
+          <IconButton size="medium" aria-label="search" color="inherit">
             <Search />
           </IconButton>
           {auth && (

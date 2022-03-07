@@ -1,9 +1,20 @@
-function WYWIdeas() {
-    return (
-      <div>
-        <h2>WYW Ideas</h2>
-      </div>
-    );
-  }
+import React from "react";
+import {Box} from '@material-ui/core';
 
-export default WYWIdeas;
+
+export default function WYWIdeas() {
+  return (
+    <Box
+        className="Hackathon"
+        component="img"
+        sx={{
+          height: 450,
+          width: 500,
+          paddingX: 85,
+          paddingY: 30
+        }}
+        alt="TComing Soon"
+        src="./ComingSoon.png"
+      />
+  );
+}

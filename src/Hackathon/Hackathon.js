@@ -1,6 +1,8 @@
 import Header from './Header';
 import SwipeableTextMobileStepper from './SwipeableTextMobileStepper';
+import SearchAndFilter from './SearchAndFilter';
 import {Grid, ListItem, Typography} from '@material-ui/core';
+import IdeaCardGridContainer from '../home/IdeaCardGridContainer';
 
 function Hackathon() {
     return (
@@ -27,6 +29,12 @@ function Hackathon() {
           </Grid>
           <Grid item xs={12}>
            <Typography variant="h4" className="App__sub-section" >Hackathon Ideas</Typography>
+          </Grid>
+          <Grid item xs={12}>
+           <SearchAndFilter />
+          </Grid>
+          <Grid item xs={12}>
+            <IdeaCardGridContainer ideasCount={4}/>
           </Grid>
         </Grid>
     );

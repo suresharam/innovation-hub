@@ -1,4 +1,4 @@
-import { GET_IDEAS, SET_CATEGORIES, SET_IDEAS } from "./constants";
+import { GET_IDEAS, SET_CATEGORIES, SET_IDEAS, ADD_IDEAS } from "./constants";
 
 const initialCategoriesState = [];
 
@@ -23,6 +23,10 @@ export const ideasReducer = (state = initialIdeasState, action) => {
 
     case GET_IDEAS: {
       return [...state.ideas];
+    }
+
+    case ADD_IDEAS: {
+      return [...state, action.value];
     }
 
     default: {
