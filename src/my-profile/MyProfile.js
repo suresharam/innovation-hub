@@ -1,35 +1,76 @@
 function MyProfile() {
-    return (
-      <div class="first">
-        <h2>Dashboard</h2>
-        <div class="second">
-        <label for="name">Name </label>
-         <input type="text" name="name" id="name" placeholder="Enter name" required/>
+  return (
+
+<div class= "last">
+<div class="student-profile py-4">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-4">
+        <div class="card shadow-sm">
+          <div class="card-header bg-transparent text-center">
+          <div class= "final">
+          <img class="imge" src="././img3.png" height="300" width="500" alt="pic1"/>
+          <br>
+          </br>
+          <br>
+          </br>
+          <div class="finl">
+          <h3>Welcome Nihar !</h3>
+            <h3>Enter your details</h3>
+            </div>
+          </div>
+          <div class="second">
+            <div class="whole">
+        <label for="First Name">First Name </label>
+       <label for="Name"> - Nihar</label>
         </div>
         <br>
         </br>
+        <div class="whole1">
+        <label for="Last Name">Last Name </label>
+        <label for="Name"> - Anil</label>
+         
+        </div>
+          <br>
+          </br>
+          
 
-
-        <div>
+        
+        <div class="third">
+        <div class="whole3">
         <label for="email">Email </label>
-         <input type="text" name="email" id="email" placeholder="Enter email" required/>
-
+        <label for="Email"> - nihar_anil@condenast.com</label>
         </div>
         <br>
         </br>
-
-        <div>
-        <label for="role">Role  </label>
-         <input type="text" name="role" id="role" placeholder="Enter role" required/>
-
+        <div class="whole4">
+        <label for="role">Role </label>
+        <label for="Role"> - Associate</label>
+         </div>
         </div>
-        <br>
-        </br>
-        <input type="submit" class="button-33" value="Submit"/>
-
+        </div>
+        </div>
+        </div>
       </div>
-      
-    );
-  }
+      <div class="col-lg-8">
+        <div class="card shadow-sm">
+          <div class="card-header bg-transparent border-0">
+           
+          </div>
+         
+        </div>
+          <div style={{height: '26px'}}></div>
+        <div class="card shadow-sm">
+          <div class="card-header bg-transparent border-0">
 
+          </div>
+          
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+</div>
+);
+}
 export default MyProfile;

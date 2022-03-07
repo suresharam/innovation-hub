@@ -16,6 +16,11 @@
   color: #fff;
 }
 
+.last{
+  background: radial-gradient(at top left, transparent, #111) #666;
+  color: #fff;
+}
+
 .Hackathon h2 {
   text-align: center;
 }
@@ -32,6 +37,59 @@
 .Grid {
   padding: 30px 150px;
 }
+
+.whole{
+  padding-left: 770px;
+}
+
+.whole1{
+  padding-left: 770px;
+}
+
+.whole2{
+  padding-left: 770px;
+}
+
+.whole3{
+  padding-left: 770px;
+}
+
+.whole4{
+  padding-left: 770px;
+}
+
+
+.imge{
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 40%;
+}
+
+.finl{
+  padding-left:770px;
+  font-size: 1px;
+}
+
+body {
+ 
+  padding: 0;
+  margin: 0;
+  font-family: 'Lato', sans-serif;
+ 
+}
+.student-profile .card {
+  border-radius: 10px;
+  padding-top: 80px;
+}
+
+.student-profile .card h3 {
+  font-size: 30px;
+  font-weight: 700;
+}
+
+
+
 
 .App-logo {
   height: 40vmin;
