@@ -1,7 +1,6 @@
 function MyProfile() {
   return (
 
-<div class= "last">
 <div class="student-profile py-4">
   <div class="container">
     <div class="row">
@@ -27,14 +26,10 @@ function MyProfile() {
         </br>
         <div class="whole1">
         <label for="Last Name">Last Name </label>
-        <label for="Name"> - Anil</label>
-         
+        <label for="Name"> - Anil</label>  
         </div>
           <br>
           </br>
-          
-
-        
         <div class="third">
         <div class="whole3">
         <label for="email">Email </label>
@@ -54,22 +49,18 @@ function MyProfile() {
       <div class="col-lg-8">
         <div class="card shadow-sm">
           <div class="card-header bg-transparent border-0">
-           
           </div>
-         
         </div>
           <div style={{height: '26px'}}></div>
         <div class="card shadow-sm">
           <div class="card-header bg-transparent border-0">
-
           </div>
-          
         </div>
       </div>
     </div>
   </div>
 </div>
-</div>
+
 );
 }
 export default MyProfile;

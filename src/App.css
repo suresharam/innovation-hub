@@ -11,15 +11,6 @@
   background-color: rgb(226, 226, 231) !important;
 }
 
-.Hackathon {
-  background: radial-gradient(at top left, transparent, #111) #666;
-  color: #fff !important;
-}
-
-.last{
-  background: radial-gradient(at top left, transparent, #111) #666;
-  color: #fff;
-}
 
 .Hackathon h2 {
   text-align: center;
@@ -257,6 +248,12 @@ li a:focus {
   width: 15% !important;
   height: 20px;
   padding-right: 400px;
+}
+
+.Footer {
+  position: absolute;
+  left:0;
+  right:0;
 }
 
 .Footer-image {

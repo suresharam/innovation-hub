@@ -5,7 +5,7 @@ import {Work} from "@material-ui/icons";
 
 export default function Footer() {
   return (
-    <Grid className="Menu" container spacing={2}>
+    <Grid className="Menu Footer" container spacing={2}>
       <Grid item xs={4}>
         <ListItem>
         </ListItem>

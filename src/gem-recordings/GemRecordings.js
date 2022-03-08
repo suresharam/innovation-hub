@@ -5,12 +5,9 @@ import {Box} from '@material-ui/core';
 export default function GemRecordings() {
   return (
     <Box
-        className="Hackathon"
         component="img"
         sx={{
-          height: 450,
-          width: 500,
-          paddingX: 85,
+          paddingX: 30,
           paddingY: 30
         }}
         alt="TComing Soon"
