@@ -9,14 +9,13 @@ function MyProfile() {
         <div class="card shadow-sm">
           <div class="card-header bg-transparent text-center">
           <div class= "final">
-          <img class="imge" src="././img3.png" height="300" width="500" alt="pic1"/>
+          <img class="imge" src="././myimg.png" height="400" width="200" alt="pic1"/>
           <br>
           </br>
           <br>
           </br>
           <div class="finl">
           <h3>Welcome Nihar !</h3>
-            <h3>Enter your details</h3>
             </div>
           </div>
           <div class="second">
