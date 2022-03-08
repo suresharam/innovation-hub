@@ -1,12 +1,12 @@
 import * as React from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-import Home from "./home/Home";
-import Hackathon from "./hackathon/Hackathon";
-import MyProfile from "./my-profile/MyProfile";
-import GemRecordings from "./gem-recordings/GemRecordings";
-import WYWIdeas from "./wyw-ideas/WYWIdeas";
-import MenuAppBar from "./header/MenuAppBar";
-import Footer from "./footer/Footer";
+import Home from "./components/Home/Home";
+import Hackathon from "./components/Hackathon/Hackathon";
+import MyProfile from "./components/my-profile/MyProfile";
+import GemRecordings from "./components/gem-recordings/GemRecordings";
+import WYWIdeas from "./components/wyw-ideas/WYWIdeas";
+import MenuAppBar from "./components/header/MenuAppBar";
+import Footer from "./components/footer/Footer";
 
 import "./App.css";
 
