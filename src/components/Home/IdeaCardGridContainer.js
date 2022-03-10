@@ -16,6 +16,7 @@ function IdeaCardGridContainer({ideas = [], ideasCount, ideasEventType}) {
                 container
                 spacing={2}
                 justifyContent="center"
+                className="idea-container"
                 
             >
                 {ideasToShow.map((idea, index) => {
