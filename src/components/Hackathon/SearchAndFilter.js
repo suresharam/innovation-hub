@@ -1,9 +1,10 @@
 import * as React from 'react';
 import { Grid, ListItem, FormControl, InputLabel, NativeSelect } from "@material-ui/core";
 
-const SearchAndFilter = () => {
-    const handleChange = () =>{
-        console.log('changes to be made here');
+const SearchAndFilter = ({onFilterSelectedCallback}) => {
+    const handleChange = (event) =>{
+        const filter = `Hackathon ${event.target.value}`;
+        onFilterSelectedCallback && onFilterSelectedCallback(filter);
     }
     return (
         <Grid className="Grid Hackathon" container spacing={2}>

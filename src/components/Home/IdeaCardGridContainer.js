@@ -1,7 +1,7 @@
 import * as React from 'react';
 import { connect } from 'react-redux';
 import IdeaCard from './IdeaCard';
-import { Grid, Box } from '@material-ui/core';
+import { Grid, Box, Typography } from '@material-ui/core';
 
 function IdeaCardGridContainer({ideas = [], ideasCount, ideasEventType}) {
     const eventRelatedIdeas = ideasEventType
@@ -37,6 +37,12 @@ function IdeaCardGridContainer({ideas = [], ideasCount, ideasEventType}) {
                         </Grid>
                     );
                 })}
+
+                {ideasToShow?.length === 0 && (
+                    <Typography variant="h5">
+                       No ideas found
+                    </Typography>
+                )}
             </Grid>
         </Box>
     );
